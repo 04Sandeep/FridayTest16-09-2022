@@ -1,0 +1,13 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Cases" verbose="1" >
+    <listeners>    <listener class-name="Reports.Listeners"/></listeners>
+
+    <test name="Verify Login">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="TestOfDemoNopCommerce.AddComputerItemToCartTesting"/>
+        </classes>
+    </test>
+</suite>
