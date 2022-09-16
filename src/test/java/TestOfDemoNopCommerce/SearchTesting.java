@@ -10,5 +10,6 @@ public class SearchTesting extends BaseClass
     public void SearchingPage()
     {
         pageFactory.getSearchingPage().searchingPage();
+        pageFactory.getSearchingPage().logout();
     }
 }

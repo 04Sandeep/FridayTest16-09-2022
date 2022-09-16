@@ -19,4 +19,9 @@ public class SearchingPage {
         driver.findElement(search).sendKeys("Computers");
         driver.findElement(clickonSearch).click();
     }
+
+    public void logout()
+    {
+        driver.findElement(By.xpath("//*[contains(text(), 'Logout')]")).click();
+    }
 }
