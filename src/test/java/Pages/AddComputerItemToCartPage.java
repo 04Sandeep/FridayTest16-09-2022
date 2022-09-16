@@ -66,7 +66,7 @@ public class AddComputerItemToCartPage
         driver.findElement(addDate).sendKeys("4");
         driver.findElement(addMonth).sendKeys("October");
         driver.findElement(addyear).sendKeys("1994");
-        driver.findElement(addEmail).sendKeys("sandeep42444@gmail.com");
+        driver.findElement(addEmail).sendKeys("sandeep12222gmail.com");
         driver.findElement(addCompany).sendKeys("Infostride");
         driver.findElement(addpassword).sendKeys("Sandy@112");
         driver.findElement(addConformPasword).sendKeys("Sandy@112");
@@ -75,7 +75,7 @@ public class AddComputerItemToCartPage
         driver.findElement(clickOnTerms).click();
         driver.findElement(clickOnCheckout).click();
         driver.findElement(addCountry).sendKeys("Australia");
-        driver.findElement(addCountry).sendKeys("Other");
+        driver.findElement(addstate).sendKeys("Other");
         driver.findElement(enterCity).sendKeys("Mohali");
         driver.findElement(enterAddress).sendKeys("TDI City, Mohali");
         driver.findElement(enterPostCode).sendKeys("123300");

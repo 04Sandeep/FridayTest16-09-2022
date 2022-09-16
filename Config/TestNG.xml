@@ -5,17 +5,12 @@
     <listeners>    <listener class-name="Reports.Listeners"/></listeners>
 
 
-    <test name="AddingComputerItemToCartPage">
-        <parameter name="browserName" value="chrome"/>
-        <classes>
-            <class name="TestOfDemoNopCommerce.AddComputerItemToCartTesting"/>
-        </classes>
-    </test>
 
-    <test name="Searching page">
+
+    <test name="Adding Cellphone Item To Cart Page">
         <parameter name="browserName" value="chrome"/>
         <classes>
-            <class name="TestOfDemoNopCommerce.SearchTesting"/>
+            <class name="TestOfDemoNopCommerce.AddingCellphoneTesting"/>
         </classes>
     </test>
 

@@ -8,6 +8,7 @@ public class PageFactory
 
        private AddComputerItemToCartPage addComputerItemToCartPage;
        private SearchingPage searchingPage;
+       private  AddingCellphonesToCart addingCellphonesToCart;
        public PageFactory(WebDriver driver)
        {
            this.driver = driver;
@@ -28,5 +29,14 @@ public class PageFactory
             searchingPage= new SearchingPage(driver);
         }
         return searchingPage;
+    }
+
+    public AddingCellphonesToCart getAddingCellphonesToCart()
+    {
+        if(addingCellphonesToCart==null)
+        {
+            addingCellphonesToCart= new AddingCellphonesToCart(driver);
+        }
+        return addingCellphonesToCart;
     }
 }
