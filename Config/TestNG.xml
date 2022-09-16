@@ -4,10 +4,19 @@
 <suite name="All Test Cases" verbose="1" >
     <listeners>    <listener class-name="Reports.Listeners"/></listeners>
 
-    <test name="Verify Login">
+
+    <test name="AddingComputerItemToCartPage">
         <parameter name="browserName" value="chrome"/>
         <classes>
             <class name="TestOfDemoNopCommerce.AddComputerItemToCartTesting"/>
         </classes>
     </test>
+
+    <test name="Searching page">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="TestOfDemoNopCommerce.SearchTesting"/>
+        </classes>
+    </test>
+
 </suite>

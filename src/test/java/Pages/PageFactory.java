@@ -7,6 +7,7 @@ public class PageFactory
        WebDriver driver;
 
        private AddComputerItemToCartPage addComputerItemToCartPage;
+       private SearchingPage searchingPage;
        public PageFactory(WebDriver driver)
        {
            this.driver = driver;
@@ -19,4 +20,13 @@ public class PageFactory
            }
            return addComputerItemToCartPage;
        }
+
+    public SearchingPage getSearchingPage()
+    {
+        if(searchingPage==null)
+        {
+            searchingPage= new SearchingPage(driver);
+        }
+        return searchingPage;
+    }
 }
