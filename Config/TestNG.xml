@@ -1,0 +1,17 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Cases" verbose="1" >
+    <listeners>    <listener class-name="Reports.Listeners"/></listeners>
+
+
+
+
+    <test name="Adding Cellphone Item To Cart Page">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="TestOfDemoNopCommerce.AddingCellphoneTesting"/>
+        </classes>
+    </test>
+
+</suite>
