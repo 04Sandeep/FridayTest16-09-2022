@@ -9,4 +9,12 @@
             <class name="TestOfDemoNopCommerce.AddToCartNotebookTesting"/>
         </classes>
     </test>
+
+    <test name="Add NoteBook Item To Cart Page">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="TestOfDemoNopCommerce.AddToCartCellphonesTesting
+        </classes>
+    </test>
+
 </suite>

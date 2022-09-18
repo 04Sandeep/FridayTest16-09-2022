@@ -1,6 +1,10 @@
 package Pages;
 
-public class AddingCellphonesToCart {
+import org.testng.Assert;
+
+import java.time.Duration;
+
+public class AddToCartCellphones {
 
     WebDriver driver;
     WebDriverWait wait;
@@ -23,13 +27,13 @@ public class AddingCellphonesToCart {
     By continueinfo = By.xpath("//button[@class = 'button-1 payment-info-next-step-button']");
     By confirm = By.xpath("//button[@class = 'button-1 confirm-order-next-step-button']");
 
-    public AddingCellphonesToCart(WebDriver driver)
+    public AddToCartCellphones(WebDriver driver)
     {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
-    public void addingCellphonesToCart()
+    public void addToCartCellphones()
     {
 
         driver.findElement(clickonLogin).click();
@@ -59,4 +63,4 @@ public class AddingCellphonesToCart {
         driver.findElement(By.xpath("//a[contains(text(),'Log out')]")).click();
     }
 }
-}
+

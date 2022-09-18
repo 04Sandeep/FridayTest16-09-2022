@@ -5,9 +5,8 @@ public class PageFactory
 {
 
     WebDriver driver;
-
-
     private AddToCartNoteBookItem addToCartNoteBookItem;
+    private AddToCartCellphones addToCartCellphones;
     public PageFactory(WebDriver driver)
     {
         this.driver = driver;
@@ -21,6 +20,16 @@ public class PageFactory
         }
         return addToCartNoteBookItem;
     }
+
+    public AddToCartCellphones getAddToCartCellphones()
+    {
+        if(addToCartCellphones==null)
+        {
+            addToCartCellphones = new AddToCartCellphones(driver);
+        }
+        return addToCartCellphones;
+
+    }
 }
 
-}
+

@@ -1,12 +1,14 @@
 package TestOfDemoNopCommerce;
 
+import org.testng.annotations.Test;
+
 public class AddToCartNotebookTesting extends BaseClass{
 
     @Test
 
-    public void AddComputerItemToCartPage()
+    public void AddToCartNotebookTesting()
     {
-        pageFactory.getAddComputerItemToCartPage().addComputerItemToCartPage();
+        pageFactory.getAddToCartNoteBookItem().addToCartNoteBookItem();
     }
 }
 }

@@ -1,5 +1,7 @@
 package Pages;
 
+import org.testng.Assert;
+
 public class AddToCartNoteBookItem {
 
     WebDriver driver;
