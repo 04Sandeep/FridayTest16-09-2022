@@ -8,6 +8,7 @@ public class PageFactory
     private AddToCartNoteBookItem addToCartNoteBookItem;
     private AddToCartCellphones addToCartCellphones;
     private AddShoesToCart addShoesToCart;
+    private AddBooksToCart addBooksToCart;
     public PageFactory(WebDriver driver)
     {
         this.driver = driver;
@@ -38,6 +39,14 @@ public class PageFactory
             addShoesToCart = new AddShoesToCart(driver);
         }
         return addShoesToCart;
+    }
+
+    public AddBooksToCart getAddBooksToCart() {
+        if(addBooksToCart == null)
+        {
+            addBooksToCart = new AddBooksToCart();
+        }
+        return addBooksToCart;
     }
 }
 
