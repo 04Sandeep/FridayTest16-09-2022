@@ -1,5 +1,6 @@
 package Pages;
 
+import TestOfDemoNopCommerce.AddJeweleryToCartTesting;
 import org.openqa.selenium.WebDriver;
 public class PageFactory
 {
@@ -9,6 +10,7 @@ public class PageFactory
     private AddToCartCellphones addToCartCellphones;
     private AddShoesToCart addShoesToCart;
     private AddBooksToCart addBooksToCart;
+    private AddJewelryToCart addJewelryToCart;
     public PageFactory(WebDriver driver)
     {
         this.driver = driver;
@@ -48,6 +50,17 @@ public class PageFactory
         }
         return addBooksToCart;
     }
+
+    public AddJewelryToCart getAddJewelryToCart() {
+
+        if(addJewelryToCart == null)
+        {
+            addJewelryToCart = new AddJewelryToCart();
+        }
+        return addJewelryToCart;
+    }
 }
+
+
 
 

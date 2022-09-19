@@ -31,4 +31,11 @@
         </classes>
     </test>
 
+    <test name="Add Jewelery To Cart Page">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="TestOfDemoNopCommerce.AddJeweleryToCartTesting
+        </classes>
+    </test>
+
 </suite>
