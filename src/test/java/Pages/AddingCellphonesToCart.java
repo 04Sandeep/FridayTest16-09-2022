@@ -5,6 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.Duration;
 
 public class AddingCellphonesToCart
@@ -13,10 +17,6 @@ public class AddingCellphonesToCart
     WebDriver driver;
     WebDriverWait wait;
 
-    By clickonLogin = By.xpath("//a[contains(text(),'Log in')]");
-    By enterEmail = By.xpath("//input[@class='email']");
-    By enterPassword = By.xpath("//input[@class='password']");
-    By clickLoginButton = By.xpath("//button[@class='button-1 login-button']");
     By clickonElectronics = By.xpath("//a[contains(text(),'Electronics')]");
     By clickonitem = By.xpath("//a[contains(text(),'HTC One M8 Android L 5.0 Lollipop')]");
     By clickonCellphones = By.xpath("//a[@title = 'Show products in category Cell phones']");
@@ -37,13 +37,28 @@ public class AddingCellphonesToCart
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
-    public void addingCellphonesToCart()
+    public void addingCellphonesToCart() throws IOException
     {
 
-        driver.findElement(clickonLogin).click();
-        driver.findElement(enterEmail).sendKeys("sandeep12345678@gmail.com");
-        driver.findElement(enterPassword).sendKeys("Sandy@112");
-        driver.findElement(clickLoginButton).click();
+        path = System.getProperty("user.dir")+"//src/test/java/TestData//TestData.xlsx";
+        FileInputStream prop1 = null;
+        try{
+            prop1 = new FileInputStream(path);
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
+        XSSFWorkbook wb = new XSSFWorkbook(prop1);
+        XSSFSheet sheet = wb.getSheet("Sheet1");
+        String username = sheet.getRow(1).getCell(0).getStringCellValue();
+        String  pwd = sheet.getRow(1).getCell(1).getStringCellValue();
+        driver.findElement(By.name("Email")).clear();
+        driver.findElement(By.name("Email")).sendKeys(username);
+        driver.findElement(By.name("Password")).clear();
+        driver.findElement(By.name("Password")).sendKeys(pwd);
+        driver.findElement(By.xpath("//button[@class='button-1 login-button']")).click();
+        //Assert.assertEquals(driver.findElement(By.xpath("//div[@class='content-header']/h1")).getText(), "Dashboard");
+
+
         Assert.assertEquals(driver.findElement(By.xpath("//h2[contains(text(),'Welcome to our store')]")).getText(), "Welcome to our store");
         wait.until(ExpectedConditions.visibilityOfElementLocated(clickonElectronics));
         driver.findElement(clickonElectronics).click();

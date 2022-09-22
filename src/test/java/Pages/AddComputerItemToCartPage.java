@@ -61,6 +61,7 @@ public class AddComputerItemToCartPage
         driver.findElement(clickOnCheckout).click();
         driver.findElement(clickOnRegister).click();
         driver.findElement(selectFemale).click();
+
         driver.findElement(addFirstName).sendKeys("Sandeep");
         driver.findElement(addLastName).sendKeys("Kaur");
         driver.findElement(addDate).sendKeys("4");
