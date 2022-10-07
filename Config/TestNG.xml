@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Cases" verbose="1" >
+    <listeners>    <listener class-name="Reports.Listeners"/></listeners>
+
+    <test name="Add Computer Item To Cart Page">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="TestOfDemoNopCommerce.AddToCartNotebookTesting"/>
+        </classes>
+    </test>
+
+    <test name="Add Cellphones Item To Cart Page">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="TestOfDemoNopCommerce.AddToCartCellphonesTesting"/>
+        </classes>
+    </test>
+
+    <test name="Add shoes Item To Cart Page">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="TestOfDemoNopCommerce.AddShoesToCartTesting"/>
+        </classes>
+    </test>
+
+    <test name="Add books Item To Cart Page">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="TestOfDemoNopCommerce.AddBooksToCartTesting"/>
+        </classes>
+    </test>
+
+    <test name="Add Jewelery To Cart Page">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="TestOfDemoNopCommerce.AddJeweleryToCartTesting
+        </classes>
+    </test>
+
+</suite>
